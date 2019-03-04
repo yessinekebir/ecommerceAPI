@@ -3,7 +3,7 @@ var router = express.Router();
 var fakeProducts = require('fake-products-sj');
 
 var auth = function(req, res, next) {
-    if (req.query.token === 'admin') {
+    if (req.query.token === 'superadmin') {
       return next();
     }
     return res.status(401).json({message: 'Invalid token'})

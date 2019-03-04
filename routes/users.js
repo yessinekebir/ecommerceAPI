@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fakeProducts = require('fake-products-sj');
-var validTokens = ['Pippo','Caio','Sempronio','Ciccio'];
+var validTokens = ['SuperAdmin','Admin','StoreManager'];
 
 var authUser = function(req, res, next) {
     if (validTokens.includes(req.query.token)){
@@ -17,5 +17,6 @@ router.get('/products', function(req, res) {
 
 router.post('/products', authUser, function(req, res) {
     res.json(fakeProducts.buyProduct(req.body.id, req.query.token));
+    res.status(201).json({message: 'Product purchased successfully!!'});
 })
 module.exports = router;
