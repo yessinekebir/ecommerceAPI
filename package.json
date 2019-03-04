@@ -13,6 +13,9 @@
     "test": "mocha",
     "start": "node app.js"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "author": "Yessine Kebir <yessine.kebir@gmail.com>",
   "license": "MIT"
 }
