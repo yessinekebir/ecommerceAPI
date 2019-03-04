@@ -8,6 +8,7 @@ var users = require('./routes/users');
 
 app.use('/admin', admin);
 app.use('/users', users);
+var port = process.env.PORT || 8080;
 
-app.listen(3001);
+app.listen(port);
 module.exports = app;
