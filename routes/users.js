@@ -14,6 +14,7 @@ router.get('/products', function(req, res) {
     res.json(fakeProducts.getProducts());
 })
 
+
 router.post('/products', authUser, function(req, res) {
     res.json(fakeProducts.buyProduct(req.body.id, req.query.token));
 })

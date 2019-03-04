@@ -4,7 +4,9 @@
   "description": "Fake eShop - Add,buy and edit a product (User,admin)",
   "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.18.2"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.4",
+    "fake-products-sj": "^1.0.2"
   },
   "devDependencies": {},
   "scripts": {
